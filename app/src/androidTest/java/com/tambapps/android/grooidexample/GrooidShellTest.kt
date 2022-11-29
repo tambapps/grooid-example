@@ -18,7 +18,7 @@ import java.io.File
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class GrooidShellTest {
 
   private val context: Context
     get() = InstrumentationRegistry.getInstrumentation().targetContext
