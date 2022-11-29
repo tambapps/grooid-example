@@ -48,6 +48,7 @@ class ExampleInstrumentedTest {
 
   @Test
   fun testObject() {
+    // this test fails
     val result = shell.evaluate("new Object()")
     assertTrue(result.result is Any)
   }
