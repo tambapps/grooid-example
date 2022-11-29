@@ -41,6 +41,22 @@ class ExampleInstrumentedTest {
   }
 
   @Test
+  fun testIntegerForSum() {
+    val result = shell.evaluate("""
+      int a = 0
+      for (i in 0..<10) a++
+      a
+    """.trimIndent())
+    assertEquals(10, result.result)
+  }
+
+  @Test
+  fun testIntegerIf() {
+    val result = shell.evaluate("if (true) 1 else 2")
+    assertEquals(1, result.result)
+  }
+
+  @Test
   fun testString() {
     val result = shell.evaluate("'string'")
     assertEquals("string", result.result)
